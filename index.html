@@ -396,21 +396,21 @@
             <h2 data-heading="My Portfolio" class="section_title">Recent Wroks</h2>
 
             <div class="work_filters">
-                <span class="work_item active-work">All</span>
-                <span class="work_item">Web</span>
-                <span class="work_item">App</span>
-                <span class="work_item">Design</span>
+                <span class="work_item active-work" data-filter="all">All</span>
+                <span class="work_item" data-filter=".web">Web</span>
+                <span class="work_item" data-filter=".app">App</span>
+                <span class="work_item" data-filter=".design">Design</span>
             </div>
 
             <div class="work_container container grid">
-                <div class="work_card">
+                <div class="work_card mix web">
                     <img src="assets/img/work-1.webp" alt="" class="work_img">
                     <h3 class="work_title">Web Design</h3>
                     <span class="work_button">Demo
                         <i class="uil uil-arrow-right work_button-icon"></i>
                     </span>
                     <div class="portfolio_item-details">
-                        <h3 class="details_title"></h3>
+                        <h3 class="details_title">The services provide for design</h3>
                         <p class="details_description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque modi deserunt rem?</p>
                         <ul class="details_info">
                             <li>Created at - <span>4 dec 2020</span></li>
@@ -421,14 +421,14 @@
                     </div>
                 </div>
 
-                <div class="work_card">
+                <div class="work_card mix app">
                     <img src="assets/img/work-2.webp" alt="" class="work_img">
-                    <h3 class="work_title">Web Design</h3>
+                    <h3 class="work_title">App Design</h3>
                     <span class="work_button">Demo
                         <i class="uil uil-arrow-right work_button-icon"></i>
                     </span>
                     <div class="portfolio_item-details">
-                        <h3 class="details_title"></h3>
+                        <h3 class="details_title">Mobile App landing design and app maintain.</h3>
                         <p class="details_description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque modi deserunt rem?</p>
                         <ul class="details_info">
                             <li>Created at - <span>4 dec 2020</span></li>
@@ -439,9 +439,9 @@
                     </div>
                 </div>
 
-                <div class="work_card">
+                <div class="work_card mix design">
                     <img src="assets/img/work-3.webp" alt="" class="work_img">
-                    <h3 class="work_title">Web Design</h3>
+                    <h3 class="work_title">Brand Design</h3>
                     <span class="work_button">Demo
                         <i class="uil uil-arrow-right work_button-icon"></i>
                     </span>
@@ -457,7 +457,7 @@
                     </div>
                 </div>
 
-                <div class="work_card">
+                <div class="work_card mix app">
                     <img src="assets/img/work-4.webp" alt="" class="work_img">
                     <h3 class="work_title">Web Design</h3>
                     <span class="work_button">Demo
@@ -475,7 +475,7 @@
                     </div>
                 </div>
 
-                <div class="work_card">
+                <div class="work_card mix web">
                     <img src="assets/img/work-5.webp" alt="" class="work_img">
                     <h3 class="work_title">Web Design</h3>
                     <span class="work_button">Demo
@@ -493,7 +493,7 @@
                     </div>
                 </div>
 
-                <div class="work_card">
+                <div class="work_card mix design">
                     <img src="assets/img/work-6.webp" alt="" class="work_img">
                     <h3 class="work_title">Web Design</h3>
                     <span class="work_button">Demo
@@ -513,10 +513,165 @@
             </div>
         </section>
 
-        <!-- Portfolio Popup -->
+        <!--===== Portfolio Popup ======-->
+        <div class="portfolio_popup">
+            <div class="portfolio_popup-inner">
+                <div class="portfolio_popup-content grid">
+                    <span class="portfolio_popup-close grid"><i class="uil uil-times"></i></span>
+                    <div class="pp_thumbnail">
+                        <img src="assets/img/work-2.webp" alt="" class="portfolio_popup-img">
+                    </div>
+                    <div class="portfolio_popup-info">
+                        <div class="portfolio_popup-subtitle">Featured- <span>Design</span></div>
+                        <div class="portfolio_popup-body">
+                            <h3 class="details_title">App for technology and Services</h3>
+                        <p class="details_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque repellendus quibusdam possimus.</p>
+                        <ul class="details_info">
+                            <li>Created at - <span>4 dec 2020</span></li>
+                            <li>Technologies - <span>html css</span></li>
+                            <li>Role - <span>frontend</span></li>
+                            <li>View - <span><a href="#">www.domain.com</a></span></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
         
         <!--===== Services =====-->
-        
+        <section class="services section" id="services">
+            <h2 data-heading="Services" class="section_title">What I offer</h2>
+
+            <div class="services_container container grid">
+                <div class="services_content">
+                    <div>
+                        <div class="uil uil-web-grid services_icon"></div>
+                        <h3 class="services_title">Web <br> Designer </h3>
+                    </div>
+
+                    <span class="services_button">
+                        View More <div class="uil uil-arrow-right services_button-icon"></div>
+                    </span>
+
+                    <div class="services_modal">
+                        <div class="services_modal-content" >
+                            <i class="uil uil-times services_modal-close"></i>
+
+                            <h3 class="services_modal-title">Web Designer</h3>
+                            <p class="services_modal-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere suscipit nihil pariatur veritatis repellendus rerum eum saepe excepturi esse nulla.</p>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">I develop the user interface.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">Web page development.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">I create ux element interactions.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">I position your company brand.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">Design and mockups of products for companies.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services_content">
+                    <div>
+                        <div class="uil uil-arrow services_icon"></div>
+                        <h3 class="services_title">UI/UX <br> Designer </h3>
+                    </div>
+
+                    <span class="services_button">
+                        View More <div class="uil uil-arrow-right services_button-icon"></div>
+                    </span>
+
+                    <div class="services_modal">
+                        <div class="services_modal-content">
+                            <i class="uil uil-times services_modal-close"></i>
+
+                            <h3 class="services_modal-title">UI/UX Designer</h3>
+                            <p class="services_modal-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere suscipit nihil pariatur veritatis repellendus rerum eum saepe excepturi esse nulla.</p>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">I develop the user interface.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">Web page development.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">I create ux element interactions.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">I position your company brand.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">Design and mockups of products for companies.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services_content">
+                    <div>
+                        <div class="uil uil-edit services_icon"></div>
+                        <h3 class="services_title">Branding <br> Designer </h3>
+                    </div>
+
+                    <span class="services_button">
+                        View More <div class="uil uil-arrow-right services_button-icon"></div>
+                    </span>
+
+                    <div class="services_modal">
+                        <div class="services_modal-content">
+                            <i class="uil uil-times services_modal-close"></i>
+
+                            <h3 class="services_modal-title">Branding Designer</h3>
+                            <p class="services_modal-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere suscipit nihil pariatur veritatis repellendus rerum eum saepe excepturi esse nulla.</p>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">I develop the user interface.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">Web page development.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">I create ux element interactions.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">I position your company brand.</p>
+                                </li>
+                                <li class="services_modal-service">
+                                    <i class="uil uil-check-circle services_modal-icon"></i>
+                                    <p class="services_modal-info">Design and mockups of products for companies.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!--===== Testimonials =====-->
         
         <!--===== Contact =====-->

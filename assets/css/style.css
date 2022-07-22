@@ -631,7 +631,7 @@ main {
 }
 
 .work_button:hover .work_button-icon {
-    
+    transform: translateX(.25rem);
 }
 
 .active-work {
@@ -642,14 +642,212 @@ main {
 /* Active Item Work */
 
 
-/* Portfolio Popup */
+/*===== Portfolio Popup =====*/
+.portfolio_popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: var(--z-modal);
+    transition: .3s;
+}
+
+.portfolio_popup.open {
+   opacity: 1;
+   visibility: visible; 
+}
+
+.portfolio_popup-inner {
+    background-color: var(--box-color);
+    width: 900px;
+    border-radius: .5rem;
+    padding: 2.5rem;
+    position: relative;
+}
+
+.portfolio_popup-content {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.portfolio_popup-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--skin-color);
+    cursor: pointer;
+}
+
+.portfolio_popup-img {
+    border-radius: .5rem;
+}
+
+.portfolio_popup-subtitle {
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.details_title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+}
+
+.details_description {
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-2);
+}
+
+.portfolio_popup-info li {
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-0-75);
+    text-transform: capitalize;
+}
+
+.portfolio_popup-info li:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio_popup-info li span {
+    font-weight: normal;
+}
+
+.portfolio_popup-info li a {
+    text-transform: lowercase;
+    color: var(--skin-color);
+}
+
 
 
 /*===== Services Section =====*/
+.services_container {
+    grid-template-columns: repeat(3, 250px);
+    justify-content: center;
+    column-gap: 1.8rem;
+}
 
+.services_content {
+    position: relative;
+    background-color: var(--box-color);
+    padding: 6rem 0 2rem 2.5rem;
+    border-radius: .25rem;
+}
+
+.services_icon {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--skin-color);
+    margin-bottom: var(--mb-1);
+}
+
+.services_title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+}
+
+.services_button {
+    color: var(--skin-color);
+    font-size: var(--small-font-size);
+    column-gap: .25rem;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.services_button-icon {
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.services_button:hover .services_button-icon {
+    transform: translateX(.25rem);
+}
+
+.services_modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.services_modal-content {
+    width: 500px;
+    position: relative;
+    background-color: var(--box-color);
+    padding: 4.5rem 2.5rem 2.5rem;
+    border-radius: .5rem;
+}
+
+.services_modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--skin-color);
+    cursor: pointer;
+}
+
+.services_modal-title, .services_modal-description {
+    text-align: center;
+}
+
+.services_modal-title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+}
+
+.services_modal-description {
+    font-size: var(--small-font-size);
+    padding: 0 3.5rem;
+    margin-bottom: var(--mb-2);
+}
+
+.services_modal-services {
+    row-gap: var(--mb-0-75);
+}
+
+.services_modal-service {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.services_modal-icon {
+    color: var(--skin-color);
+    font-size: 1.5rem;
+}
+
+.services_modal-info {
+    font-size: var(--small-font-size)
+}
 
 /* Active Modal*/
-
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
 
 /*===== Testimonial Section =====*/
 
