@@ -96,12 +96,76 @@ modalCloses.forEach((modalClose) => {
 
 
 /*=============== SWIPER TESTIMONIAL ===============*/
+let swiper = new Swiper(".testimonials_container", {
+  spaceBetween: 30,
+  loop:true,
+  grabCursor:true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 48,
+    },
+  },
+});
 
 /*=============== INPUT ANIMATION ===============*/
+const inputs = document.querySelectorAll(".input");
 
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc),
+  input.addEventListener("focus", blurFunc)
+})
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+//get all sections that have an id defined
+const sections = document.querySelectorAll("select[id]");
+
+//add an event listener listening for scroll
+window.addEventListener("scroll", navHighlighter);
+
+function navHighlighter()
+{
+  //get current scroll position
+  let scrollY = window.pageYOffset;
+  //Now we loop through sections to get height, top and ID values for each
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50,
+    sectionId = current.getAttribute("id");
+    /*= If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionID variable we are getting while looping through
+    sections us as an section selector = */
+
+    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
+    {
+      document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add("active-link")
+    }
+    else
+    {
+      document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove("active-link")
+    }
+  })
+}
 
 
 /*=============== SHOW SCROLL UP ===============*/
